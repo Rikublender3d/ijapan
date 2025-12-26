@@ -6,6 +6,7 @@ const zenKakuGothicNew = Zen_Kaku_Gothic_New({
   weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-zen-kaku',
 });
 
 
@@ -21,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body className={`antialiased ${zenKakuGothicNew.className}`}>
+    <html lang="ja" className={zenKakuGothicNew.variable}>
+      <body className="antialiased ${zenKakuGothicNew.className}">
         {children}
       </body>
     </html>
