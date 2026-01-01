@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-
-
 @layer base {
   body {
-    font-family: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    font-family:
+      "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+      Meiryo, sans-serif;
   }
 
   html {
