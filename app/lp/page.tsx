@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { IoRemove } from "react-icons/io5";
-import { FiTool } from "react-icons/fi";
+import { IoAdd } from "react-icons/io5";
 import { FaArrowsRotate } from "react-icons/fa6";
 import { CiRuler } from "react-icons/ci";
 import { FaVirusSlash } from "react-icons/fa";
@@ -12,6 +11,8 @@ import { LuSmilePlus } from "react-icons/lu";
 import { FaEye } from "react-icons/fa";
 import { FaMicroscope } from "react-icons/fa";
 import { FaShieldAlt } from "react-icons/fa";
+import { FaGlobe, FaWater } from "react-icons/fa";
+import { FiTarget } from "react-icons/fi";
 import { Squash as Hamburger } from "hamburger-react";
 
 // Animation variants
@@ -54,7 +55,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white fixed w-full top-0 z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-5">
-          <nav className="flex justify-between items-center py-4">
+          <nav className="flex justify-between items-center py-2 md:py-4">
             <div className="flex items-center gap-2">
               <div className="text-2xl font-bold text-[#1E3A8A]">iJapan</div>
             </div>
@@ -127,7 +128,7 @@ export default function Home() {
 
       <main className="w-full">
         {/* Hero Section */}
-        <section className="bg-white py-24 mt-20" id="home">
+        <section className="bg-white pb-24 pt-15 mt-20 md:py-24" id="home">
           <div className="max-w-7xl mx-auto px-5">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -137,19 +138,23 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
               >
                 <div className="text-[#4FD1C7] text-sm font-semibold mb-4">
-                  iJapan株式会社
+                  iJAPAN LLC
                 </div>
-                <h1 className="text-5xl md:text-5xl mb-6 font-bold text-[#1E3A8A] leading-tight">
-                  信頼できる
+                <h1 className="text-3xl md:text-3xl mb-6 font-bold text-[#1E3A8A] leading-tight">
+                  そのアバットメント
                   <br />
-                  インプラント除去治具
+                  スクリュー破折、
+                  <br />
+                  あなたはインプラントを救えますか？
                 </h1>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  折れたインプラントネジをわずか数分で安全に除去。
+                <p className="text-md md:text-lg text-gray-600 mb-8 leading-relaxed">
+                  アバットメントスクリューの破折は、術者にとって最も避けたいトラブルの一つです。
                   <br />
-                  インプラントのネジ破折でお困りですか？簡単・安全に除去できます。
                   <br />
-                  高度な設計で施術時間を大幅短縮。平均10-15分で完了し、再手術不要で患者さんへの負担を軽減します。
+                  このページを御覧になっている先生の多くは、インプラント治療のベテランであり、過去にアバットメントスクリューの除去に苦慮された経験をお持ちのことと思います。
+                  <br />
+                  <br />
+                  2026年に販売がスタートしたiRescuePro（アイレスキュープロ）は破折スクリューを短時間に安全に除去し、インプラント体を温存するために開発されたシステムです。10年の臨床経験によって成熟された設計により、再手術を回避し患者負担と術者ストレスを最小限に抑えます。
                 </p>
                 <a
                   href="#contact"
@@ -228,9 +233,9 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">24時間対応</h3>
+                <h3 className="text-xl font-bold mb-2">迅速対応</h3>
                 <p className="text-blue-100">
-                  緊急時にも迅速に対応いたします。お問い合わせは24時間受け付けております。
+                  緊急時にも迅速に対応いたします。ご注文をいただいた原則1営業日後に、当社よりiRescueProシステムを発送いたします。
                 </p>
               </motion.div>
               <motion.div
@@ -256,9 +261,11 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">15年以上の実績</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  10年以上の臨床評価実績
+                </h3>
                 <p className="text-blue-100">
-                  長年の臨床経験に基づいて開発された製品であり、全国の歯科医院で採用実績があります。
+                  長年の臨床経験に基づいて開発されたシステムであり、全国の大学病院・口腔外科・歯科医院での採用実績があります。
                 </p>
               </motion.div>
               <motion.div
@@ -274,9 +281,9 @@ export default function Home() {
                     <span className="text-white text-base font-bold">+</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">高品質なケア</h3>
+                <h3 className="text-xl font-bold mb-2">高い臨床成績</h3>
                 <p className="text-blue-100">
-                  臨床モニター成功率98%の実績。インプラント体を傷つけずに安全に除去できます。
+                  臨床モニターでの成功率は９６%（推奨適応症対象）。インプラント体を傷付けずに短時間で破折アバットメントスクリューを除去できます。
                 </p>
               </motion.div>
             </div>
@@ -292,40 +299,26 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeInUp}
-                transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <div className="relative w-full h-96 bg-gray-200 rounded-3xl overflow-hidden">
-                  <Image
-                    src="/neji.png"
-                    alt="iRescuePro インプラント除去治具キット"
-                    fill
-                    className="object-cover object-top rounded-3xl"
-                    priority
-                  />
-                </div>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <div className="text-[#4FD1C7] text-sm font-semibold mb-4">
                   課題について
                 </div>
                 <h2 className="text-4xl md:text-5xl text-[#1E3A8A] mb-6 font-bold leading-tight">
-                  インプラントネジ破折の
+                  アバットメント
                   <br />
-                  臨床的課題
+                  スクリュー破折の
+                  <br />
+                  問題点
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  インプラント治療中または経過中にアバットメントスクリューが破折すると、治療に重大な支障をきたします。
+                  アバットメントスクリューが破折するとインプラント治療の予後に重大な支障をきたします。
                   <br />
-                  また、折れたスクリューの除去は極めて難しく、適切な器具なしに超音波スケーラー等で除去を試みると、インプラント内部を傷つけてしまうリスクがあります。
                   <br />
-                  内部に残留した破折ネジを放置すると、細菌感染やインプラント周囲炎の原因にもなり、最悪埋入したインプラント本体を撤去せざるを得なくなるケースもあります。
+                  破折したスクリューの除去は極めて難しく、適切な器具を用いない場合には、スクリュー除去をより困難にしたり、インプラント内部を傷つけて修復不可能としてしまうリスクがあります。
+                  <br />
+                  <br />
+                  最悪の場合は、インプラント本体を撤去せざるを得なくなるケースもあります。
                 </p>
                 <a
                   href="#product"
@@ -367,10 +360,14 @@ export default function Home() {
                   発生頻度
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  インプラントのネジ緩みは比較的頻繁（6～7%）に起こる一方、ネジ自体の破折も無視できません。研究報告ではアバットメントスクリューの破折は約2%とされています。
+                  ①
+                  アバットメントスクリューの緩みは比較的高頻度に発生し、報告によっては約6〜7％に及ぶとされています。
+                </p>
+                <p className="text-gray-600 mb-4">
+                  一方で、アバットメントスクリューの破折は稀なトラブルと考えられてきましたが、研究報告ではアバットメントスクリューの破折率は約2％とされています。
                 </p>
                 <p className="text-gray-600">
-                  しかし、完全に避けることは難しく、誰にでも起こり得ます。
+                  しかしながら、完全に回避することは難しく、経験年数や術者を問わず、誰にでも起こり得る合併症の一つです。
                 </p>
               </div>
 
@@ -388,33 +385,19 @@ export default function Home() {
                   />
                 </svg>
                 <h3 className="text-xl font-semibold mb-4 mt-2 text-[#1E3A8A]">
-                  従来の除去の難しさ
+                  従来法の難しさ
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  折れたスクリューの除去は極めて難しく、適切な器具なしに超音波スケーラー等で除去を試みると、インプラント内部を傷つけてしまうリスクがあります。
+                  破折スクリューの除去は、従来きわめて困難な処置の一つです。
                 </p>
-                <p className="text-gray-600">
-                  肉眼で直径わずか数ミリの部位を操作するのは難易度が高く、術者に大きな負担がかかります。
-                </p>
-              </div>
-
-              <div className="relative bg-white p-8 rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="size-12"
-                >
-                  <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
-                </svg>
-                <h3 className="text-xl font-semibold mb-4 mt-2 text-[#1E3A8A]">
-                  放置すればインプラント喪失につながる
-                </h3>
                 <p className="text-gray-600 mb-4">
-                  内部に残留した破折ネジを放置すると、細菌感染やインプラント周囲炎の原因にもなり、最悪埋入したインプラント本体を撤去せざるを得なくなるケースもあります。
+                  破折スクリュー内部に加工を施す除去キットでは、患者さんに不快な振動を与え、インプラント内部を損傷する危険性があります。
+                </p>
+                <p className="text-gray-600 mb-4">
+                  また、短針やピンセットを用いた方法では所要時間が読めず、実際に多大な時間を要します。
                 </p>
                 <p className="text-gray-600">
-                  これは患者にとって再手術等が必要になることを意味し、金銭的負担も増えてしまいます。
+                  いずれも、直径数ミリの狭小な視野での操作は高い熟練度を要求し、術者に大きな精神的・身体的負担を強いる処置となります。
                 </p>
               </div>
 
@@ -435,12 +418,91 @@ export default function Home() {
                   患者・術者双方のストレス
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  ネジ破折は患者にも不安と痛みを与えますし、歯科医師にとっても「どう対処するか」というプレッシャーになります。
+                  アバットメントスクリュー破折は患者への不安を与えますし、ドクターにとっても、&quot;どう対処したらいいのか&quot;というプレッシャーになります。
                 </p>
                 <p className="text-gray-600">
-                  適切なツールがない状況で無理に除去を試みれば、治療失敗や信頼低下にもつながりかねません。
+                  適切なツールがない状況で無理に除去を試みれば、治療の失敗や信用低下にもつながりかねません。
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Did You Know Section */}
+        <section className="py-20 bg-gray-50" id="knowledge">
+          <div className="max-w-7xl mx-auto px-5">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <div className="text-[#4FD1C7] text-sm font-semibold mb-4">
+                知っておくべきこと
+              </div>
+              <h2 className="text-4xl md:text-5xl text-[#1E3A8A] mb-6 font-bold">
+                あなたはこのことを知っていますか？
+              </h2>
+            </motion.div>
+
+            <div className="space-y-12 md:space-y-16">
+              {[
+                {
+                  icon: <FiTarget className="w-12 h-12 text-[#2563EB]" />,
+                  title: "スクリューは「ほぼ同じ場所」で折れる",
+                  desc: "アバットメントスクリューの破折は、偶然ではありません。多くの症例で、応力が集中しやすいスクリューの特定の部位において破折が生じることが知られています。",
+                },
+                {
+                  icon: <FaArrowsRotate className="w-12 h-12 text-[#2563EB]" />,
+                  title: "折れたスクリューの「ほとんど」は回転可能である",
+                  desc: "破折後もスクリューの多くはインプラント内部で完全に固着しているわけではなく、回転可能な状態にあります。つまり、多くの症例において適切なアプローチとツールがあれば、非侵襲的に除去できる可能性が十分に残されているのです。",
+                },
+                {
+                  icon: <FaWater className="w-12 h-12 text-[#2563EB]" />,
+                  title: "スクリューの破折面は「波状の粗面」である",
+                  subTitle: "破断面イメージ",
+                  desc: "スクリューの破折面は、滑らかな断面ではなく、疲労破壊に特有の波状で粗い形態を示します。この微細な凹凸は、適切に利用すれば把持や回転操作のための有効な手がかりとなります。",
+                },
+                {
+                  icon: <CiRuler className="w-12 h-12 text-[#2563EB]" />,
+                  title: "スクリューのシャフト径はインプラントによって異なる",
+                  desc: "アバットメントスクリューのシャフト径は、インプラントメーカーやシステムごとに僅かに異なります。",
+                },
+                {
+                  icon: <FaGlobe className="w-12 h-12 text-[#2563EB]" />,
+                  title: "スクリューの破折は「世界的な臨床的課題」となっている",
+                  desc: "スクリュー破折は特定の患者や術者に限った問題ではありません。世界中の臨床現場で共通して直面している機械的合併症であり、グローバルに解決策が求められている課題です。",
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm ${
+                    index % 2 === 1 ? "md:flex-row-reverse" : ""
+                  }`}
+                >
+                  <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-[#F0F9FF] border border-blue-50 flex items-center justify-center">
+                    {item.icon}
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-xl md:text-2xl font-bold text-[#1E3A8A] mb-3">
+                      {item.title}
+                    </h3>
+                    {item.subTitle && (
+                      <p className="text-sm text-[#4FD1C7] font-medium mb-2">
+                        {item.subTitle}
+                      </p>
+                    )}
+                    <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -460,14 +522,14 @@ export default function Home() {
                 製品情報
               </div>
               <h2 className="text-4xl md:text-5xl text-[#1E3A8A] mb-6 font-bold">
-                製品概要
+                iRescuePro（アイレスキュープロ）の概要
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                折れたインプラントネジを安全かつ迅速に摘出する医療器具
+                破折したアバットメントスクリューを安全かつ迅速に除去する医療器具
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid gap-12 items-center mb-16">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -476,17 +538,18 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="relative"
               >
-                <div className="relative w-full h-96 rounded-3xl overflow-hidden bg-gray-200">
+                <div className="relative w-full aspect-[2/1] rounded-3xl overflow-hidden bg-gray-100">
                   <Image
-                    src="/product.png"
+                    src="/kit.jpg"
                     alt="iRescuePro インプラント除去治具キット"
                     fill
-                    className="object-cover rounded-3xl padding-xl"
+                    className="object-cover rounded-3xl"
                     priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </motion.div>
-              <motion.div
+              {/* <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -539,10 +602,10 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
                 <h3 className="text-xl font-semibold mb-4 text-[#1E3A8A]">
                   汎用性
@@ -560,7 +623,47 @@ export default function Home() {
                   13485認証取得により、品質管理体制が確立されています。
                 </p>
               </div>
-            </div>
+            </div> */}
+          </div>
+        </section>
+
+        {/* iRescuePro Case Video Section */}
+        <section className="py-20 bg-gray-50" id="video">
+          <div className="max-w-7xl mx-auto px-5">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <div className="text-[#4FD1C7] text-sm font-semibold mb-4">
+                症例動画
+              </div>
+              <h2 className="text-4xl md:text-5xl text-[#1E3A8A] mb-6 font-bold">
+                iRescuePro症例動画
+              </h2>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <div className="relative w-full max-w-4xl aspect-video rounded-3xl overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.youtube.com/embed/dNE9tBFE0qg?si=QLD-qZSk_xWp7mNu"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -582,34 +685,34 @@ export default function Home() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <IoRemove />,
+                  icon: <IoAdd />,
                   title: "インプラントを傷つけない除去",
                   desc: "インプラント体内部のネジ溝を傷つけずに折れたスクリューのみを摘出可能。高度に設計された器具により、インプラント本体を再利用できる状態で残せます。",
                 },
-                {
-                  icon: <FiTool />,
-                  title: "高精度ドリルと専用チップ",
-                  desc: "折れたネジに新たな溝や下穴を作る専用ドリルは高い切削力と耐久性を備えています。滑りにくい特殊コーティングや刃先形状により、硬いチタン製のネジ片にも確実に食い込みます。",
-                },
+                // {
+                //   icon: <FiTool />,
+                //   title: "高精度ドリルと専用チップ",
+                //   desc: "折れたネジに新たな溝や下穴を作る専用ドリルは高い切削力と耐久性を備えています。滑りにくい特殊コーティングや刃先形状により、硬いチタン製のネジ片にも確実に食い込みます。",
+                // },
                 {
                   icon: <FaArrowsRotate style={{ transform: "scaleX(-1)" }} />,
-                  title: "逆回転によるスクリュー緩除",
-                  desc: "ドリルおよびエキストラクターは反時計回り（逆回転）で操作する設計になっています。これによりネジ残存片を緩めながら徐々に回収でき、固着したスクリューでも無理な力をかけず除去が可能です。",
+                  title: "シンプルなハンド操作",
+                  desc: "エンジンを使ったドリル作業ではないため、誤って内ネジをキズつけてしまう心配はありません。また、不快な音や振動もないため、患者さんは安心して除去処置を受けられます。",
                 },
                 {
                   icon: <CiRuler />,
                   title: "マルチサイズ対応",
-                  desc: "複数径のツールを同梱し、様々なサイズ・種類のインプラントスクリュー破折に対応。細径（M1.6相当）から太径（M2.0相当）まで幅広い症例に対処できます。",
+                  desc: "6種類で1セットとなっており、これだけで国内外ほぼ全てのインプラントシステムに対応しています。カラーコード化されていてサイズの識別が簡単です。",
                 },
                 {
                   icon: <FaVirusSlash />,
                   title: "高品質素材と滅菌対応",
-                  desc: "全ての器具は高強度・高耐食性ステンレス製で、オートクレーブ滅菌に対応。繰り返し使用による摩耗に強く、錆にもなりにくいため長期にわたり清潔かつ安定した性能を発揮します。",
+                  desc: "高強度・高耐食性のステンレス素材でオートクレーブ滅菌に対応。複数回の使用でも安定的な性能を発揮します。",
                 },
                 {
                   icon: <LuSmilePlus />,
-                  title: "シンプルな2ステップ手技",
-                  desc: "複雑な操作は不要で2ステップの簡単手順で除去できます。まず専用ドリルでネジ片に溝を付与し、次にエキストラクターを差し込んでゆっくり回転除去するだけ。",
+                  title: "シンプルなワンステップ手技",
+                  desc: "面倒な複数の器具の操作は必要ありません。手指による回転操作のワンスッテプで完結します。",
                 },
                 {
                   icon: <FaEye />,
@@ -627,13 +730,8 @@ export default function Home() {
                   desc: "スクリュー破折以外の関連トラブルにも対応可能。アバットメント自体の破折、スクリューヘッドのなめり、ドライバー先端の破損など、様々な失敗ケースでも活躍します。",
                 },
               ].map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
-                  variants={fadeInUp}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
                 >
                   <div className="text-5xl mb-4">{feature.icon}</div>
@@ -643,7 +741,7 @@ export default function Home() {
                   <p className="text-gray-600 leading-relaxed mb-6">
                     {feature.desc}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -667,10 +765,10 @@ export default function Home() {
                 <span className="text-white text-lg font-bold">+</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                今すぐ資料請求・お問い合わせ
+                資料請求・お問い合わせ
               </h2>
               <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-                製品に関するご質問、お見積り、資料請求など、お気軽にお問い合わせください。専門スタッフが丁寧に対応いたします。
+                iRescueProの症例パンフレットを無料でお送りいたします。ご質問も気軽にお問い合わせください。
               </p>
               <a
                 href="#contact"
@@ -690,6 +788,52 @@ export default function Home() {
                   />
                 </svg>
                 お問い合わせ
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Urgent Order Banner */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-5">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="relative bg-[#2563EB] rounded-3xl p-12 text-center text-white"
+            >
+              <div className="absolute top-4 right-4 w-6 h-6 bg-[#4FD1C7] rounded-full flex items-center justify-center">
+                <span className="text-white text-sm font-bold">+</span>
+              </div>
+              <div className="absolute bottom-4 left-4 w-8 h-8 bg-[#4FD1C7] rounded-full flex items-center justify-center">
+                <span className="text-white text-lg font-bold">+</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                すぐに製品が必要な方
+              </h2>
+              <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+                iRescuePro（＋パンフレット）を至急お送りいたします（原則翌営業日発送）。
+              </p>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 bg-white text-[#2563EB] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
+                </svg>
+                ご注文はここから
               </a>
             </motion.div>
           </div>
@@ -1253,47 +1397,26 @@ export default function Home() {
         {/* Contact Form Section */}
         <section className="py-20 bg-white" id="contact">
           <div className="max-w-4xl mx-auto px-5">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInUp}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12">
               <h2 className="text-4xl mb-4 font-bold text-[#1E3A8A]">
                 お問い合わせ・資料請求
               </h2>
               <p className="text-lg text-gray-600">
                 製品に関するご質問、お見積り、資料請求など、お気軽にお問い合わせください
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeInUp}
-                transition={{ duration: 0.5 }}
-                className="text-center p-6 bg-gray-50 rounded-xl"
-              >
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
                 <h4 className="mb-2 text-[#1E3A8A] font-semibold">
-                  📞 お電話でのお問い合わせ
+                  お電話でのお問い合わせ
                 </h4>
                 <p className="font-bold text-lg text-[#1E3A8A]">0120-XXX-XXX</p>
                 <p className="text-sm text-gray-600">
                   受付時間：平日 9:00-18:00
                 </p>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeInUp}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-center p-6 bg-gray-50 rounded-xl"
-              >
+              </div>
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
                 <h4 className="mb-2 text-[#1E3A8A] font-semibold">
                   📧 メールでのお問い合わせ
                 </h4>
@@ -1303,15 +1426,8 @@ export default function Home() {
                 <p className="text-sm text-gray-600">
                   24時間受付（返信は営業時間内）
                 </p>
-              </motion.div>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeInUp}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-center p-6 bg-gray-50 rounded-xl"
-              >
+              </div>
+              <div className="text-center p-6 bg-gray-50 rounded-xl">
                 <h4 className="mb-2 text-[#1E3A8A] font-semibold">
                   🏢 本社所在地
                 </h4>
@@ -1320,28 +1436,21 @@ export default function Home() {
                   <br />
                   東京都XXX区XXXXXXX
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <motion.footer
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeInUp}
-        transition={{ duration: 0.6 }}
-        className="bg-white py-10 text-center shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)]"
-      >
+      <footer className="bg-white py-10 text-center shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_-2px_4px_-1px_rgba(0,0,0,0.06)]">
         <div className="max-w-6xl mx-auto px-5">
           <p className="text-[#1E3A8A]">
             &copy; 2025 iJapan株式会社. All rights reserved.
           </p>
           <p className="mt-2 text-gray-600">歯科医療機器の開発・製造・販売</p>
         </div>
-      </motion.footer>
+      </footer>
     </div>
   );
 }
