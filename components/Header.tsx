@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 
@@ -52,8 +53,18 @@ export default function Header() {
     <header className="bg-white fixed w-full top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-5">
         <nav className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-[#1E3A8A]">iJapan</div>
+          <Link
+            href="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            <Image
+              src="/icons.png"
+              alt="iJAPAN合同会社"
+              width={140}
+              height={40}
+              className="h-8 md:h-10 w-auto"
+              priority
+            />
           </Link>
           <ul
             className={`nav-menu md:flex md:gap-8 list-none absolute md:relative top-full md:top-auto left-0 md:left-auto right-0 md:right-auto bg-white md:bg-transparent flex-col md:flex-row p-5 md:p-0 shadow-lg md:shadow-none ${isMenuOpen ? "flex" : "hidden"}`}
