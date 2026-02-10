@@ -522,9 +522,8 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUp}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm ${
-                    index % 2 === 1 ? "md:flex-row-reverse" : ""
-                  }`}
+                  className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm ${index % 2 === 1 ? "md:flex-row-reverse" : ""
+                    }`}
                 >
                   <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-[#F0F9FF] border border-blue-50 flex items-center justify-center">
                     {item.icon}
@@ -687,7 +686,7 @@ export default function Home() {
                     <FaGlobe className="w-6 h-6 text-[#2563EB]" />
                   </div>
                   <h3 className="text-xl font-bold text-[#1E3A8A]">
-                    ・スクリューの破折は「世界的な臨床的課題」となっている
+                    スクリューの破折は「世界的な臨床的課題」となっている
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
