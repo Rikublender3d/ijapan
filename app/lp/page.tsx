@@ -522,8 +522,9 @@ export default function Home() {
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeInUp}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm ${index % 2 === 1 ? "md:flex-row-reverse" : ""
-                    }`}
+                  className={`flex flex-col md:flex-row gap-8 md:gap-12 items-center bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm ${
+                    index % 2 === 1 ? "md:flex-row-reverse" : ""
+                  }`}
                 >
                   <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-[#F0F9FF] border border-blue-50 flex items-center justify-center">
                     {item.icon}
@@ -859,16 +860,15 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="relative"
               >
-                <div className="relative w-full aspect-[2/1] rounded-3xl overflow-hidden bg-gray-100">
-                  <Image
-                    src="/kit.jpg"
-                    alt="iRescuePro インプラント除去治具キット"
-                    fill
-                    className="object-cover rounded-3xl"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                <Image
+                  src="/kit.jpg"
+                  alt="iRescuePro インプラント除去治具キット（6本セット）"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-3xl"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </motion.div>
               {/* <motion.div
                 initial="hidden"
@@ -1377,6 +1377,50 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Common Case: Removal Gets Harder */}
+        <section className="py-20 bg-white" id="common-case">
+          <div className="max-w-4xl mx-auto px-5">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl text-[#1E3A8A] mb-6 font-bold">
+                よくある「除去が難しくなってしまう」ケース
+              </h2>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100"
+            >
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                「最初は、よくあるスクリュー破折だと思っていました。」
+              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                超音波チップや探針で触れてみたものの、思ったように動かず、気がつけば破折片はインプラント内部へ。その結果、
+              </p>
+              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                <li>操作時間は延び</li>
+                <li>内ネジ損傷のリスクが高まり</li>
+                <li>最終的にはインプラント撤去を検討する事態に――</li>
+              </ul>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                「最初に選ぶ器具が違っていれば」
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                そう感じた経験は、決して少なくありません。多くの除去トラブルは、技術不足ではなく「最初の選択」によって起こります。
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Purchase Info Section */}
         <section className="py-20 bg-gray-50" id="purchase">
           <div className="max-w-6xl mx-auto px-5">
@@ -1396,7 +1440,7 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -1405,19 +1449,25 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 className="relative bg-white p-8 rounded-xl shadow-lg overflow-hidden"
               >
-                <h3 className="text-2xl font-semibold mb-4 text-slate-700">
-                  価格情報
+                <h3 className="text-2xl font-semibold mb-2 text-slate-700">
+                  iRescuePro
                 </h3>
-                <p className="text-3xl font-bold text-blue-500 mb-4">
-                  ¥148,000
-                  <span className="text-lg text-gray-600">（税別）</span>
+                <p className="text-3xl font-bold text-blue-500 mb-2">
+                  198,000円（税込）
                 </p>
-                <p className="text-gray-600 mb-4">
-                  キット一式（専用ドリル、エキストラクター、ハンドル、各種アダプター含む）
+                <p className="text-gray-600 mb-2">
+                  インプラント内破折スクリュー除去専用器具
                 </p>
-                <p className="text-sm text-gray-500">
-                  ＊iJAPAN社のオンラインサイトから２４時間購入可能
+                <p className="text-gray-600 mb-4 font-medium">
+                  破折スクリュー除去の&quot;ファーストコンタクト&quot;として
                 </p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>※本製品は繰り返し使用可能な器具です</li>
+                  <li>※1症例のトラブル回避で十分に投資回収が可能です</li>
+                  <li>
+                    ※製造ロット・供給状況により、今後価格が変更される場合があります
+                  </li>
+                </ul>
               </motion.div>
 
               <motion.div
@@ -1486,6 +1536,85 @@ export default function Home() {
                 </div>
               </motion.div>
             </div>
+
+            {/* Comparison Table */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInUp}
+              transition={{ duration: 0.5 }}
+              className="overflow-x-auto"
+            >
+              <table className="w-full min-w-[600px] bg-white rounded-xl shadow-lg border border-gray-100 text-left">
+                <thead>
+                  <tr className="border-b border-gray-200 bg-gray-50">
+                    <th className="py-4 px-4 font-semibold text-slate-700">
+                      比較項目
+                    </th>
+                    <th className="py-4 px-4 font-semibold text-slate-700">
+                      一般的なスクリュー除去器具
+                    </th>
+                    <th className="py-4 px-4 font-semibold text-[#1E3A8A]">
+                      iRescuePro
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-600">
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      想定されている使用タイミング
+                    </td>
+                    <td className="py-3 px-4">固着後・深部破折</td>
+                    <td className="py-3 px-4">初期対応のファーストチョイス</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      操作手順
+                    </td>
+                    <td className="py-3 px-4">複雑・工程が多い</td>
+                    <td className="py-3 px-4">シンプル・短時間</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      破折片への影響
+                    </td>
+                    <td className="py-3 px-4">押し込みリスクあり</td>
+                    <td className="py-3 px-4">押し込まず把持・回転</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      インプラント内ネジへの影響
+                    </td>
+                    <td className="py-3 px-4">損傷リスクあり</td>
+                    <td className="py-3 px-4">内ネジを温存</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      使用対象
+                    </td>
+                    <td className="py-3 px-4">特定メーカー向けが多い</td>
+                    <td className="py-3 px-4">ほぼ全てのインプラントに対応</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      使用頻度
+                    </td>
+                    <td className="py-3 px-4">限定的</td>
+                    <td className="py-3 px-4">
+                      &quot;まず最初に使う&quot;べき器具
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4 font-medium text-slate-700">
+                      コンセプト
+                    </td>
+                    <td className="py-3 px-4">除去そのもの</td>
+                    <td className="py-3 px-4">スピーディー・失敗回避</td>
+                  </tr>
+                </tbody>
+              </table>
+            </motion.div>
           </div>
         </section>
 
