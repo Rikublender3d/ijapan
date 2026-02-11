@@ -1118,7 +1118,7 @@ export default function Home() {
                 iRescuePro（＋パンフレット）を至急お送りいたします（原則翌営業日発送）。
               </p>
               <a
-                href="https://buy.stripe.com/test_9B6dRb0nEaLw9gy9Ck3ks00"
+                href="https://buy.stripe.com/fZu3cx9Y4a8S5zu7bm4ko01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-[#2563EB] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
@@ -1513,7 +1513,7 @@ export default function Home() {
                     すぐに製品が必要な方。iRescuePro（＋パンフレット）を至急お送りいたします（原則翌営業日発送）。
                   </p>
                   <a
-                    href="https://buy.stripe.com/test_9B6dRb0nEaLw9gy9Ck3ks00"
+                    href="https://buy.stripe.com/fZu3cx9Y4a8S5zu7bm4ko01"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#2563EB] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#1E40AF] transition-colors duration-300 text-sm"
