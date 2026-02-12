@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -31,7 +32,7 @@ export default function Home() {
           id="home"
         >
           <div className="max-w-6xl mx-auto px-5">
-            <h1 className="text-5xl md:text-6xl mb-5">iJapan株式会社</h1>
+            <h1 className="text-5xl md:text-6xl mb-5">iJAPAN LLC</h1>
             <p className="text-xl max-w-2xl mx-auto mb-10">
               歯科医療の未来を創造する
               <br />
@@ -72,15 +73,13 @@ export default function Home() {
                 variants={fadeInUp}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-[#1E3A8A] mb-5 text-2xl font-bold">
-                  私たちのミッション
-                </h3>
                 <p className="mb-5 text-gray-600">
-                  iJapan株式会社は、歯科医療の現場で本当に必要とされる医療機器の開発・製造を行う企業です。
+                  iJAPAN LLC
+                  (iJAPAN合同会社)は、歯科医療の現場で本当に必要とされる医療機器の開発・製造を行う企業です。
                 </p>
 
                 <p className="mb-5 text-gray-600">
-                  現役の歯科医師である井汲憲治CEOが、長年の臨床経験から感じた「現場の課題」を解決するため、実用性と安全性を追求した製品開発を行っています。
+                  井汲憲治CEOをはじめとする各分野のリーダーが、“現場の課題”を解決するため、実用性と安全性を追求した革新的な医療機器・ソフトウエアのを製品開発を行っています。
                 </p>
 
                 <p className="mb-5 text-gray-600">
@@ -94,7 +93,7 @@ export default function Home() {
                   <li className="flex items-start">
                     <span className="text-[#2563EB] mr-2">▶</span>
                     <span className="text-gray-600">
-                      現役歯科医師による現場目線の製品開発
+                      各分野の歯科医師・エンジニアによる現場目線の医療機器・ソフトウエアの開発
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -106,7 +105,7 @@ export default function Home() {
                   <li className="flex items-start">
                     <span className="text-[#2563EB] mr-2">▶</span>
                     <span className="text-gray-600">
-                      高品質な医療機器の製造技術
+                      革新的で高品質な医療機器・ソフトウエアの開発
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -124,8 +123,13 @@ export default function Home() {
                 variants={fadeInUp}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="bg-gray-200 h-96 rounded-xl flex items-center justify-center text-gray-600">
-                  会社イメージ画像
+                <div className="relative h-96 md:rounded-xl overflow-hidden">
+                  <Image
+                    src="/site_2.jpeg"
+                    alt="会社イメージ"
+                    fill
+                    className="object-contain object-left md:object-cover"
+                  />
                 </div>
               </motion.div>
             </div>
@@ -139,18 +143,15 @@ export default function Home() {
               {[
                 {
                   title: "会社概要",
+                  sub_title: "About iJAPAN LLC",
+                  image: "/site_3.jpeg",
                   description:
-                    "私たちのミッション、強み、代表挨拶、企業情報など、iJapan株式会社について詳しくご紹介します。",
+                    "私たちのミッション・強み・代表挨拶・企業情報など、iJAPAN LLCについて詳しくご紹介します。",
                   href: "/about",
                 },
                 {
-                  title: "事業内容",
-                  description:
-                    "製品企画・開発から製造・販売、アフターサービスまで、一貫したサービス提供の流れをご紹介します。",
-                  href: "/services",
-                },
-                {
                   title: "製品情報",
+                  image: "/site_4.jpeg",
                   description:
                     "革新的な技術で歯科医療の課題を解決する製品群をご紹介します。iRescueProをはじめとする製品の詳細をご覧いただけます。",
                   href: "/products",
@@ -165,26 +166,36 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div
-                    className={`md:flex relative py-10 md:my-15 my-5 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+                    className={`flex flex-col md:flex-row relative py-10 md:my-15 my-5 ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
                     style={{ minHeight: "360px" }}
                   >
-                    {/* Image */}
+                    {/* Image - SP: 上に配置・余白付きで画像全体表示 / PC: 従来どおり */}
                     <div
-                      className={`w-full block md:absolute ${index % 2 === 1 ? "md:top-0 md:left-0" : "md:top-0 md:right-0"} md:w-[52%] md:h-full`}
+                      className={`w-full order-first md:order-none block md:absolute ${index % 2 === 1 ? "md:top-0 md:left-0" : "md:top-0 md:right-0"} md:w-[52%] md:h-full`}
                     >
-                      <div
-                        className="w-full md:h-full h-[300px] rounded-sm overflow-hidden"
-                        style={{ aspectRatio: "600 / 500" }}
-                      >
-                        <div className="w-full md:h-full h-[300px] bg-gray-400"></div>
+                      <div className="w-full mx-auto max-w-md md:max-w-none aspect-[4/3] md:aspect-auto md:h-full rounded-xl md:rounded-sm overflow-hidden relative">
+                        <Image
+                          src={card.image}
+                          alt="会社イメージ"
+                          fill
+                          className="object-contain md:object-cover rounded-xl md:rounded-sm"
+                          sizes="(max-width: 768px) 100vw, 52vw"
+                        />
                       </div>
                     </div>
-                    {/* Text Card */}
-                    <div className="relative bg-white shadow-md md:rounded-sm rounded-t-none md:rounded-t-sm p-10 w-[95%] mx-auto md:w-[52%] md:mx-0 flex flex-col justify-between z-10">
+                    {/* Text Card - SP: 画像との間に隙間を開けて角丸が見えるように */}
+                    <div className="relative bg-white shadow-md md:rounded-sm rounded-xl md:rounded-t-sm p-8 md:p-10 w-full md:w-[52%] md:mx-0 flex flex-col justify-between z-10 mt-3 md:mt-0">
                       <div>
                         <h3 className="text-3xl font-bold text-black mb-6">
                           {card.title}
                         </h3>
+                        {card.sub_title ? (
+                          <h4 className="text-2xl font-bold text-black mb-6">
+                            {card.sub_title}
+                          </h4>
+                        ) : (
+                          ""
+                        )}
                         <p className="text-gray-700 leading-relaxed mb-8">
                           {card.description}
                         </p>
@@ -200,65 +211,6 @@ export default function Home() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section
-          className="py-20 bg-slate-700 text-white text-center"
-          id="contact"
-        >
-          <div className="max-w-6xl mx-auto px-5">
-            <h2 className="text-4xl mb-8 font-bold">お問い合わせ</h2>
-            <p className="text-lg mb-12">
-              製品に関するご質問、お見積り、資料請求など、お気軽にお問い合わせください。
-            </p>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12 text-black">
-              {[
-                {
-                  title: "お電話でのお問い合わせ",
-                  content: "0120-XXX-XXX",
-                  subtext: "受付時間：平日 9:00-18:00",
-                },
-                {
-                  title: "メールでのお問い合わせ",
-                  content: "info@ijapan.co.jp",
-                  subtext: "24時間受付（返信は営業時間内）",
-                },
-                {
-                  title: "資料請求",
-                  content: (
-                    <>
-                      製品カタログや詳細資料を
-                      <br />
-                      無料でお送りします
-                    </>
-                  ),
-                  subtext: "FAX: 03-XXXX-XXXX",
-                },
-                {
-                  title: "本社所在地",
-                  content: "〒XXX-XXXX 東京都XXX区XXXXXXX",
-                  subtext: "最寄駅：XXX駅 徒歩X分",
-                },
-              ].map((contact, index) => (
-                <div
-                  key={index}
-                  className="p-8 bg-white bg-opacity-10 rounded-xl"
-                >
-                  <h4 className="mb-4 text-slate-700 font-semibold">
-                    {contact.title}
-                  </h4>
-                  <p
-                    className={`font-bold ${index === 2 ? "text-base" : "text-lg"}`}
-                  >
-                    {contact.content}
-                  </p>
-                  <p className="text-sm mt-2">{contact.subtext}</p>
-                </div>
               ))}
             </div>
           </div>

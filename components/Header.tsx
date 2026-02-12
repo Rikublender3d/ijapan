@@ -89,15 +89,6 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/services"
-                className="text-gray-700 font-medium hover:opacity-70 transition-colors duration-300 block py-2 md:py-0"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                事業内容
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/products"
                 className="text-gray-700 font-medium hover:opacity-70 transition-colors duration-300 block py-2 md:py-0"
                 onClick={() => setIsMenuOpen(false)}

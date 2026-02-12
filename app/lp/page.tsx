@@ -139,7 +139,7 @@ export default function Home() {
       <main className="w-full">
         {/* Hero Section */}
         <section
-          className="bg-white pb-24 pt-15 md:pt-5 md: pb-5  mt-20 md:py-24 md:h-screen"
+          className="bg-white pb-24 pt-15 md:pt-5 md: pb-5  mt-20 md:py-24"
           id="home"
         >
           <div className="max-w-7xl mx-auto px-5">
@@ -196,23 +196,15 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="relative"
               >
-                <div className="relative w-full h-96 rounded-3xl overflow-hidden">
+                <div className="relative w-full h-[260px] sm:h-[320px] md:aspect-[3/4] md:h-auto md:min-h-[380px] md:max-h-[520px] rounded-2xl md:rounded-3xl overflow-hidden">
                   <Image
-                    src="/dentist.png"
-                    alt="iRescuePro インプラント除去治具キット"
+                    src="/lp_top.png"
+                    alt="iRescuePro インプラント除去治具"
                     fill
-                    className="object-cover object-top rounded-3xl"
+                    className="object-contain rounded-2xl md:rounded-3xl"
                     priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute top-4 right-4 w-6 h-6 bg-[#4FD1C7] rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm font-bold">+</span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 w-8 h-8 bg-[#4FD1C7] rounded-full flex items-center justify-center">
-                    <span className="text-white text-lg font-bold">+</span>
-                  </div>
-                  <div className="absolute top-1/2 right-8 w-4 h-4 bg-[#4FD1C7] rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">+</span>
-                  </div>
                 </div>
               </motion.div>
             </div>
